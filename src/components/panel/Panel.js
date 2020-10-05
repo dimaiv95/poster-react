@@ -77,7 +77,9 @@ const Panel = () => {
                     <Container>
                         <Grid container >
                             <Grid item xs={6} className={ classes.panelLeft } >
-                                <Typography variant="h4" component="h1"><Link to="/" className={ classes.link } >Poster</Link></Typography>
+                                <Typography variant="h4" component="h1">
+                                    <Link to="/" className={ classes.link } >Poster</Link>
+                                </Typography>
                             </Grid>
                             <Grid item xs={6} className={ classes.panelRight } >
                             <div className={ classes.search } >

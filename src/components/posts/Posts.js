@@ -65,7 +65,7 @@ const Posts = ({ searchBy, currentPage }) => {
     const loadingComponent = loading ? <Spiner /> : null;
     const emptyComponent = hasData && !data ? <Empty /> : null;
     const dataComponent = hasData && data ? <PostsView data={ data } searchBy={ searchBy } /> : null;
-    
+
     return(
         <Fragment>
             { loadingComponent }
@@ -76,4 +76,4 @@ const Posts = ({ searchBy, currentPage }) => {
     );
 };
 
-export default React.memo(Posts);
+export default Posts;

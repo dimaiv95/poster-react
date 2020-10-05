@@ -16,7 +16,7 @@ const HomePage = ({ searchBy: defaultSearchBy, currentPage: defaultCurrentPage }
 
     useEffect(() => {
         if(!search){
-            historySetQuery(defaultSearchBy, defaultCurrentPage);
+            historySetQuery(defaultSearchBy, defaultCurrentPage, "replace");
         }
         if(search){
             const decodeUrl = decodeURI(search).slice(1).split("&");
@@ -28,7 +28,7 @@ const HomePage = ({ searchBy: defaultSearchBy, currentPage: defaultCurrentPage }
             }));           
         }
     }, [search]);
-    
+
     return( 
         <Fragment>
             { searchBy && <Posts searchBy={ searchBy } currentPage={ currentPage } /> }
